@@ -1,4 +1,5 @@
-var express = require('express');
-var app = express();
 var path = require('path');
-app.use(express.static(path.join(__dirname, 'public')));
+module.exports = function (app,express){
+	app.use('/css',express.static(path.join(__dirname, '../public/stylesheets')));
+	app.use('/views', express.static(path.join(__dirname, '../views')));
+}

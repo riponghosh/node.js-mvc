@@ -1,6 +1,6 @@
 var homeController={
 	index:function(req, res, next) {
-		res.send('hello');
+		res.sendFile('index.html',{root:'views'});
 	},
 
 	about:function(req, res, next) {
