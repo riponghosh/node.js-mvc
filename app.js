@@ -15,6 +15,6 @@ app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 require('./config/static-files')(app,express);
-require('./config/database');
+var db=require('./config/database');
 
 module.exports = app;
